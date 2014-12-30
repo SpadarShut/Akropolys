@@ -16,19 +16,21 @@
 	<title>
 		   <?php
 		      if (function_exists('is_tag') && is_tag()) {
-		         single_tag_title("Tag Archive for &quot;"); echo '&quot; - '; }
+		         single_tag_title(""); }
 		      elseif (is_archive()) {
-		         wp_title(''); echo ' Archive - '; }
+		         wp_title(''); echo ' '; }
 		      elseif (is_search()) {
-		         echo 'Search for &quot;'.wp_specialchars($s).'&quot; - '; }
+		         echo 'Поиск &quot;'.wp_specialchars($s).'&quot;'; }
 		      elseif (!(is_404()) && (is_single()) || (is_page())) {
-		         wp_title(''); echo ' - '; }
+		         wp_title('');  }
 		      elseif (is_404()) {
-		         echo 'Not Found - '; }
+		         echo '404 - Страница не найдена'; }
 		      if (is_home()) {
-		         bloginfo('name'); echo ' - '; bloginfo('description'); }
+		         bloginfo('name'); echo ' - '; bloginfo('description');
+		         }
 		      else {
-		          bloginfo('name'); }
+		          // bloginfo('name');
+		          }
 		      if ($paged>1) {
 		         echo ' - page '. $paged; }
 		   ?>
