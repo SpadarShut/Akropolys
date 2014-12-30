@@ -13,7 +13,7 @@
 
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
-					<h2 class="single_heading"><?php the_title(); ?></h1>
+					<h1 class="single_heading"><?php the_title(); ?></h1>
 					
 					<div class="entry-content">
 						

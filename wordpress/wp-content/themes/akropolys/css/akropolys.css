@@ -261,9 +261,10 @@ a.logo{
 .frameblock_cont{
     background: url("../img/main_cont_bg.png") repeat-y left top;
     padding: 0 20px 0 32px;
+    min-height: 500px;
 }
-.frameblock_cont > ul,
-.frameblock_cont > ol {
+.frameblock_cont ul,
+.frameblock_cont ol {
 	margin: 1em 0 1em 16px;
 }
 .frameblock_cont li{
@@ -282,7 +283,7 @@ a.logo{
 .frameblock_cont h1,
 .frameblock_cont h2,
 .frameblock_cont h3 {
-	margin-top: 20px;
+	/*margin-top: 20px; */
 }
 .frameblock_cont h1:empty,
 .frameblock_cont h2:empty,
