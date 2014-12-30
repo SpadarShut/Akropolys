@@ -14,17 +14,7 @@
 					
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 								
-				<h2 class="single_heading">
-				
-				<?php if( has_term( array('karnizy', 'moldingi', 'obramleniya', 'rozetki', 'kronshteyny', 'kolonny', 'pilyastry'), 'product_type' ) ) { 
-						echo 'Гипсовая лепнина /';
-					}
-					else if( has_term( array('ornamenty', 'elementy-fasada'), 'product_type' ) ) { 
-						echo 'Фасадные обрамления /';
-					}?>	
-					
-					<?php the_title(); ?>
-				</h2>
+				<h1 class="single_heading"><?php the_title(); ?></h1>
 
 						<?php
 							$product_price = get_field('product_price');

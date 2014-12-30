@@ -32,7 +32,7 @@
 		          // bloginfo('name');
 		          }
 		      if ($paged>1) {
-		         echo ' - page '. $paged; }
+		         echo ' - страница '. $paged; }
 		   ?>
 	</title>
 	

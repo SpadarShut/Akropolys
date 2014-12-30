@@ -11,10 +11,19 @@
             <div class="frameblock_top"><div class="frameblock_bot">
                 <div class="frameblock_cont">
 					
-				<h1 class="single_heading"><?php single_cat_title(); ?></h1>
+				<h1 class="single_heading"><?php
+
+					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+					single_cat_title();
+
+					if ($paged > 1) {
+					  echo " - страница " . $paged;
+					}
+
+				?></h1>
 					
 					<?php $category_description = category_description();
-						if ( ! empty( $category_description ) )
+						if ( ! empty( $category_description ) && $paged == 1)
 						echo '<div class="cat_description_text">' . $category_description . '</div>';
 					?>
 
