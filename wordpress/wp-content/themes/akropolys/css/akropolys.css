@@ -274,10 +274,12 @@ a.logo{
     margin-top: 1em;
     line-height: 20px;
 }
-.frameblock_cont h2{
+.frameblock_cont h1,
+.frameblock_cont h2 {
     font: normal 15pt 'Book Antiqua', Georgia, serif;
     color: #000000;
 }
+.frameblock_cont h1,
 .frameblock_cont h2,
 .frameblock_cont h3 {
 	margin-top: 20px;
