@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6, li, p{
     padding: 0;
 }
 p{
-	margin-bottom:1em;
+	margin-bottom: 1em;
 }
 h1{
 	display: block;
@@ -101,7 +101,7 @@ html{
     background-attachment: fixed;
 }
 body{
-    font: 15px sans-serif;
+    font: 15px/1.5 sans-serif;
     background-attachment: fixed;
     color: #333;
     min-width: 960px;
@@ -263,6 +263,14 @@ a.logo{
     padding: 0 20px 0 32px;
     min-height: 500px;
 }
+
+.frameblock_cont > :last-child {
+    margin-bottom: 0;
+}
+.frameblock_cont:after {
+    content: '';
+    display: table;
+}
 .frameblock_cont ul,
 .frameblock_cont ol {
 	margin: 1em 0 1em 16px;
@@ -271,9 +279,8 @@ a.logo{
 	margin-bottom: 5px;
 }
 .frameblock_cont p{
-    margin-bottom: 0;
-    margin-top: 1em;
-    line-height: 20px;
+    margin-top: 0;
+    margin-bottom: 1em;
 }
 .frameblock_cont h1,
 .frameblock_cont h2 {
@@ -318,7 +325,7 @@ a.logo{
     color: #4a4a4a;
     text-align: right;
     padding-right: 10px;
-    margin-bottom: 2px;
+    margin-bottom: 6px;
 }
 .aside_nav .h2 {
 	margin-top: 20px;
@@ -766,4 +773,8 @@ html .single_heading{
 }
 .pricelist_title_cell{
 	width: 200px;
+}
+.ddsg-xml-link,
+.ddsg-xml-link + div[style]{
+    display: none;
 }
