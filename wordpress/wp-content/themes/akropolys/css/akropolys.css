@@ -290,7 +290,7 @@ a.logo{
 .frameblock_cont h1,
 .frameblock_cont h2,
 .frameblock_cont h3 {
-	/*margin-top: 20px; */
+	margin: 0 0 20px;
 }
 .frameblock_cont h1:empty,
 .frameblock_cont h2:empty,
@@ -379,28 +379,30 @@ a.logo{
 }
 .footer{
     background: #fff;
-    padding: 10px 0;
-    font: italic 15px/2 'Book Antiqua', Georgia, serif;
+    padding: 20px 0;
+    font: italic 13px 'Book Antiqua', Georgia, serif;
     color: #4a4a4a;
     box-shadow: 0 0 12px #bfbfbf;
 }
-.contact_us{
+.footer_p1{
+    box-sizing: border-box;
     float: left;
-    margin-left: 20px;
+    padding-left: 20px;
     width: 65%;
 }
-.copyrights{
+.footer_p2 {
+    box-sizing: border-box;
+    width: 35%;
+    padding-right: 20px;
     float: right;
     text-align: right;
-    margin-right: 20px;
-    width: 30%;
 }
 .counters {
 
 }
 .counters img {
 	vertical-align: top;
-	margin-top: .5em
+	margin-bottom: .5em
 }
 
 .products_area{
