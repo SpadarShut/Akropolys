@@ -429,8 +429,6 @@ a.logo{
     position: absolute;
     left: 0;
     top: 0;
-	opacity: 0;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 0);
     width: 140px;
     padding: 5px;
     height: 100%;
@@ -443,7 +441,6 @@ a.logo{
     transition: opacity .5s;
     white-space: nowrap;
     background-color: rgba(255, 255, 255, .8);
-    *filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#89ffffff,endColorstr=#89ffffff);
 }
 .dimentions:before{
     display: inline-block;
@@ -455,10 +452,6 @@ a.logo{
     vertical-align: middle;
     max-height: 90%;
     max-width: 100%;
-}
-.product_imagery a:hover .dimentions{
-    opacity: 1;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 100);
 }
 .product_desc{
     margin-left: 425px;
