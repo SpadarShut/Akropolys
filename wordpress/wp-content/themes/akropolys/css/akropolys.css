@@ -161,7 +161,7 @@ a.logo{
 		text-decoration: none;
 		font: italic 1.1em Palatino, Georgia, serif;
 	}
-	.current_page_item  {
+	.current_page_item a {
 		font-weight: bold;
 		
 	}
