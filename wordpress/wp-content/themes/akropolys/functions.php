@@ -96,4 +96,12 @@
 			return $option_posts_per_page;
 		}
 	}
+
+	function deleteOldFile($file) {
+		$mdate = date("Ymd", filemtime($file));
+		$date  = date("Ymd");
+		if ($mdate < $date) {
+			unlink($file);
+		}
+	}
 ?>
