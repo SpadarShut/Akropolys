@@ -56,9 +56,11 @@
 
         <a class="logo" href="<?php bloginfo('url'); ?>" title="Перейти на главную"><img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="Akropolys - изделия из гипса"></a>
 
-		<div class="hdr-contacts">
-		Velcom: <b>+375 (29) 321-00-85</b><br>
-        e-mail: <b><a href="mailto:info@akropolys.by">info@akropolys.by</a></b>
+		<div class="hdr-contacts" itemscope itemtype="http://schema.org/Organization">
+			<span itemprop="name" class="hide_me">Akropolys.by</span>
+		Velcom: <b itemprop="telephone">+375 (29) 321-00-85</b><br>
+		MTC: <b itemprop="telephone">+375 (33) 601-00-85</b><br>
+        e-mail: <b><a href="mailto:info@akropolys.by" itemprop="email">info@akropolys.by</a></b>
 		</div>
 		
         <div class="desc">Гипсовая лепнина, фасадные обрамления, роспись стен, керамика, литьё из металла</div>
