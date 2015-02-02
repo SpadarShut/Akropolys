@@ -11,7 +11,7 @@
         array(type=>'pilyastry', title=>'Пилястры', img => 'pilastry.jpg'),
         array(type=>'ornamenty', title=>'Орнаменты', img => 'ornament.jpg'),
         array(type=>'elementy-fasada', title=>'Элементы фасада', img => 'fasad.jpg'),
-        array(type=>'balyasinyi-iz-betona, title=>'Балясины', img => 'balasiny.jpg'),
+        array(type=>'balyasinyi-iz-betona', title=>'Балясины', img => 'balasiny.jpg'),
         array(type=>'kolonny-i-pilyastry', title=>'Фасадные колонны и пилястры', img => 'fasad-kolonny-pilastry.jpg'),
       );
   ?>
