@@ -1,6 +1,6 @@
 <div class="main_cats_block">
 
-	<ul class="four_cats group">
+	<ul class="products_list group">
 		<li>
 			<a href="<?php echo home_url(); ?>/product_type/karnizy/">
 				<h2>Карнизы</h2>

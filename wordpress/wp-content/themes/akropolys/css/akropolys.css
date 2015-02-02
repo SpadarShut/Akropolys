@@ -333,48 +333,90 @@ a.logo{
 .main_column{
     margin-bottom: 20px;
 }
-.four_cats{
+.main_cats_block {
+    padding: 0 15px;
+}
+
+.main_cats_block:before {
+    content: '';
+    display: table;
+}
+.products_list {
     list-style: none;
     margin-bottom: 40px;
+    margin-left: -20px !important;
+    padding: 0;
 }
-.four_cats li{
+.products_list li {
+    box-sizing: border-box;
     float: left;
-    margin-left: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
 }
-.four_cats a{
+
+.by_3 .products_list li {
+    width: 33.33%;
+}
+.by_3 .products_list li:nth-child(3n+1) {
+    clear: left;
+}
+
+.by_4 .products_list li {
+    width: 25%;
+}
+.by_4 .products_list li:nth-child(4n+1) {
+    clear: left;
+}
+
+.products_list a {
     position: relative;
     display: block;
-    width: 207px;
-    height: 128px;
+    overflow: hidden;
     background: #fff;
-    padding: 4px;
     box-shadow: 0 0 5px 1px #dcdad4;
     text-decoration: none;
 }
-.four_cats a:hover{
+.products_list a:hover{
     box-shadow: 0 0 5px 1px #c9c9c9;
+    cursor: pointer;
 }
-.four_cats h2{
+
+.products_list img {
+    display: block;
+    width: 100%;
+    border: 4px solid #fff;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.products_list img:hover {
+    cursor: pointer;
+}
+.products_list h2{
     position: absolute;
     left: 4px;
-    top: 87px;
-    text-align: center;
-    background-color: rgba(255, 255, 255, .89);
-    width: 207px;
+    bottom: 17%;
+    right: 4px;
     padding: 3px 0 5px;
+    margin: 0;
+    /*width: 207px;*/
+    text-align: center;
+    font: italic 18px 'Book Antiqua', Georgia, serif;
+    background-color: rgba(255, 255, 255, .89);
     color: #4a4a4a;
-    font: italic 19px 'Book Antiqua', Georgia, serif;
     *filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#89ffffff,endColorstr=#89ffffff);
 }
-.ie8 .four_cats h2{
+.ie8 .products_list h2{
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#89ffffff,endColorstr=#89ffffff);
 }
-.four_cats a:hover h2{
+.products_list a:hover img{
+    cursor: pointer;
+}
+.products_list a:hover h2{
     text-decoration: underline;
     background-color: rgba(255, 255, 255, .95);
     *filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#95ffffff,endColorstr=#95ffffff);
 }
-.ie8 .four_cats a:hover h2{
+.ie8 .products_list a:hover h2{
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#95ffffff,endColorstr=#95ffffff);
 }
 .footer{
@@ -575,7 +617,7 @@ a.logo{
 	float: left;
 	margin-right: 10px;
 }
-.navigation  li a, .navigation li span{
+.navigation  .page {
 	background: none;
 	border: none;
 	padding: 0;

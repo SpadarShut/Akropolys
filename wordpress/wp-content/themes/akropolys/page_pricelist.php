@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<?php get_template_part( 'four_cats' ); ?>
+<?php get_template_part( 'cats_list' ); ?>
 
     <div class="main_column group">
 	

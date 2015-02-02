@@ -52,6 +52,6 @@
 
     </div><!-- /.main_column -->
 
-	<?php get_template_part( 'four_cats' ); ?>
+	<?php get_template_part( 'cats_list' ); ?>
 	
 <?php get_footer(); ?>

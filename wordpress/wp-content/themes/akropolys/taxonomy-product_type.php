@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<?php get_template_part( 'four_cats' ); ?>
-
     <div class="main_column group">
 	
         <?php get_sidebar(); ?>
@@ -50,5 +48,10 @@
         </div><!-- /.main_content -->
 
     </div><!-- /.main_column -->
+
+    <div class="main_cats_block by_4">
+        <?php get_template_part( 'cats_list' ); ?>
+    </div><!-- /.main_cats_block -->
+
 	
 <?php get_footer(); ?>

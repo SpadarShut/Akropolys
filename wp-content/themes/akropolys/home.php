@@ -26,7 +26,7 @@
 
     <div class="main_cats_block">
 
-        <ul class="four_cats group">
+        <ul class="products_list group">
             <li>
                 <a href="#">
                     <h2>Карнизы</h2>
