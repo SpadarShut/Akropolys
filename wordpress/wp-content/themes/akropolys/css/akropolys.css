@@ -11,10 +11,10 @@ body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
 ::-moz-selection { background: #f60; color: #fff; text-shadow: none; }
 ::selection { background: #f60; color: #fff; text-shadow: none; }
-a { color: #e77d7d;
+a { color: #880402;
     text-decoration: underline; }
-a:visited { color: #B78E8E; }
-a:hover { color: #EF4C24; }
+a:visited { color: #947372 }
+a:hover { color: #AD1915; }
 a:hover, a:active { outline: 0; text-decoration: none;}
 abbr[title] { border-bottom: 1px dotted; }
 b, strong { font-weight: bold; }
