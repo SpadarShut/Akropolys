@@ -154,11 +154,12 @@
 
   function render_in_BYR ($inUSD) {
     $price = $inUSD;
-    preg_match("/.*?(\d+).*?(\s*за.*)/",$inUSD, $matches);
+    preg_match("/.*?(\d+[,.]\d+|\d+).*?(\s*за.*)?/",$inUSD, $matches);
     $kurs = getKurs();
 
     if ($kurs) {
-      $price = number_format($matches[1]*$kurs, 0, ',', ' ') . ' б.р. '. $matches[2];
+      $dlr = str_replace(',', '.', $matches[1]);
+      $price = number_format($dlr*$kurs, 0, ',', ' ') . ' б.р. '. $matches[2];
     }
 
     return $price;
