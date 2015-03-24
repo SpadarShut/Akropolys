@@ -15,7 +15,7 @@
 				<h1 class="single_heading"><?php the_title(); ?></h1>
 
 						<?php
-							$product_price = get_field('product_price');
+							$product_price = render_in_BYR (get_field('product_price'));
 							$product_dimentions = get_field('product_dimentions');
 							$product_sizes = get_field('product_sizes');
 							$product_kapitel = get_field('kapitel');

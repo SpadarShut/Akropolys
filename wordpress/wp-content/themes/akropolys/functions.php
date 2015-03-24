@@ -97,11 +97,75 @@
 		}
 	}
 
-	function deleteOldFile($file) {
-		$mdate = date("Ymd", filemtime($file));
-		$date  = date("Ymd");
-		if ($mdate < $date) {
-			unlink($file);
-		}
-	}
+  function getKurs () {
+      $kurs;
+      $kurs_data = get_option('kurs');
+
+
+      // only check if last update happened later than today @ 11 AM minsk time
+      // and if no custom rate was set in WP settings
+
+      $need_to_ask_bank = strtotime($kurs_data['check_date']) < strtotime('today 11:00 GMT+3') && !$kurs_data[custom_rub];
+      //$need_to_ask_bank = strtotime($kurs_data['check_date']) < strtotime('now - 5sec'); // GMT, = +4 h in minsk, correct me
+
+
+      if (!$kurs_data || $need_to_ask_bank) {
+        updateKurs();
+        $kurs_data = get_option('kurs');
+      }
+
+      if ($kurs_data[custom_rub]) {
+          $kurs = $kurs_data[custom_rub];
+      }
+      else {
+        $kurs = $kurs_data[rub];
+      }
+
+      return $kurs;
+  }
+
+  function updateKurs () {
+
+    $data = simplexml_load_file('http://www.priorbank.by/CurratesExportXml.axd?version=2');
+    //$data = simplexml_load_file('http://localhost/Akropolys/wordpress/wp-content/themes/akropolys/kurs.xml');
+
+    // todo add waiting timeout and incorrect response error handling
+    if ($data) {
+
+      $dollar = $data->xpath('/EXCHANGE_CURRENCY/LIST_R_DATE/R_DATE/LIST_E_CHANNEL/E_CHANNEL[@Id="3"]/LIST_RATE/RATE[@ISO="USD" and @SORT="1"]/SELL/text()');
+
+      if ($dollar && (string)$dollar[0]) {
+
+        // Get new values
+        $kurs = (string)$dollar[0];
+        $kurs_date = (string)$data->xpath('/EXCHANGE_CURRENCY/LIST_R_DATE/R_DATE/DATE/text()')[0];
+
+        // Update values preserving all missing values
+        $current_kurs = get_option('kurs');
+
+        $current_kurs['rub'] = $kurs;
+        $current_kurs['kurs_date'] = $kurs_date;
+        $current_kurs['check_date'] = date('r');
+
+        update_option('kurs', $current_kurs);
+      }
+    }
+  }
+
+  function render_in_BYR ($inUSD) {
+    $price = $inUSD;
+    preg_match("/.*?(\d+).*?(\s*за.*)/",$inUSD, $matches);
+    $kurs = getKurs();
+
+    if ($kurs) {
+      $price = number_format($matches[1]*$kurs, 0, ',', ' ') . ' б.р. '. $matches[2];
+    }
+
+    return $price;
+  }
+
+  if (is_admin()){
+      include_once('kurs.php');
+  }
+
 ?>

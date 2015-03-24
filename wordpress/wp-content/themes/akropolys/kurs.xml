@@ -1,0 +1,16 @@
+<EXCHANGE_CURRENCY>
+    <LIST_R_DATE>
+        <R_DATE>
+            <DATE>Tue, 03 Mar 2015 00:00:00 GMT</DATE>
+            <LIST_E_CHANNEL>
+                <E_CHANNEL Id="3">
+                    <LIST_RATE>
+                        <RATE ISO="USD" SORT="1">
+                            <SELL>15000</SELL>
+                        </RATE>
+                    </LIST_RATE>
+                </E_CHANNEL>
+            </LIST_E_CHANNEL>
+        </R_DATE>
+    </LIST_R_DATE>
+</EXCHANGE_CURRENCY>

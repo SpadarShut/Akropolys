@@ -526,9 +526,6 @@ a.logo{
 .product_desc a:hover{
     text-decoration: none;
 }
-.product_price {
-    display: none !important; /* Hide price until laws change in belarus :( */
-}
 .index_news_block{
     padding-top: 30px;
 }
